@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>CARE M.A {% block title %}{% endblock  %}</title>
+</head>
+<body>
+    <div class="xs-menu-cont">
+        <a id="menutoggle"><i class="fa fa-align-justify"></i> </a>
+          <nav class="xs-menu displaynone">
+            
+          </nav>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="{% url 'home:home' %}">Inicio</a>
+            </li>
+            <li>
+              <a href="{% url 'home:reports' %}">Reportes</a>
+            </li>
+            <li>
+              <a href="{% url 'home:contact' %}">Contactanos</a>
+            </li>
+           <li style="float:right;">
+             <a href="https://www.instagram.com/3am.oficial/">Instagram</a>
+            </li>
+  
+          </ul>
+        </nav>
+      </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        {% block content %}
+
+        {% endblock  %}
+     
+    </div>
+    
+</body>
+<footer>
+  Copyright© Emeyce Software Solutions
+</footer>
+</html>
